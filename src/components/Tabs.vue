@@ -2,16 +2,16 @@
   <div
     ref="root"
     :class="rootClasses">
-    <div class="cocoda-vue-tabs-header">
+    <div class="jskos-vue-tabs-header">
       <div
         v-for="(tab, index) in tabs"
         v-show="!hiddenTabs[index]"
-        :key="`cocoda-vue-tabs-${index}`"
-        class="cocoda-vue-tabs-header-item"
+        :key="`jskos-vue-tabs-${index}`"
+        class="jskos-vue-tabs-header-item"
         :class="{
-          'cocoda-vue-tabs-header-item-active': tab.isActive,
-          'cocoda-vue-tabs-header-item-inactive': !tab.isActive,
-          'cocoda-vue-tabs-header-item-fill': fill,
+          'jskos-vue-tabs-header-item-active': tab.isActive,
+          'jskos-vue-tabs-header-item-inactive': !tab.isActive,
+          'jskos-vue-tabs-header-item-fill': fill,
         }"
         :style="{
           'flex-basis': fill ? fillMinWidth : 'auto',
@@ -67,7 +67,7 @@ export default defineComponent({
     /**
      * If true, borders will be shown. Alternatively, you can provide a string that contains one or more of "top", "right", "bottom", "left" for partial borders.
      *
-     * Override the CSS class `cocoda-vue-tabs-border-{all|top|right|bottom|left}` to adjust borders.
+     * Override the CSS class `jskos-vue-tabs-border-{all|top|right|bottom|left}` to adjust borders.
      */
     borders: {
       type: [Boolean, String],
@@ -97,10 +97,10 @@ export default defineComponent({
       return "md"
     },
     rootClasses() {
-      let borderClassPrefix = "cocoda-vue-tabs-border-"
+      let borderClassPrefix = "jskos-vue-tabs-border-"
       let classes = {
-        "cocoda-vue-tabs": true,
-        [`cocoda-vue-tabs-${this._size}`]: true,
+        "jskos-vue-tabs": true,
+        [`jskos-vue-tabs-${this._size}`]: true,
       }
       if (this.borders === false) {
         return classes
@@ -133,9 +133,6 @@ export default defineComponent({
     hiddenTabs() {
       this.activateTab(this.activeTabIndex)
     },
-  },
-  mounted () {
-
   },
   methods: {
     registerTab(tab) {
@@ -186,30 +183,30 @@ export default defineComponent({
 </script>
 
 <style scoped>
-.cocoda-vue-tabs {
+.jskos-vue-tabs {
   display: flex;
   flex-direction: column;
 }
 
-.cocoda-vue-tabs-border-all {
+.jskos-vue-tabs-border-all {
   border: 1px solid rgba(132,141,149,0.2);
   border-radius: 8px;
 }
-.cocoda-vue-tabs-border-top {
+.jskos-vue-tabs-border-top {
   border-top: 1px solid rgba(132,141,149,0.2);
 }
-.cocoda-vue-tabs-border-right {
+.jskos-vue-tabs-border-right {
   border-right: 1px solid rgba(132,141,149,0.2);
 }
-.cocoda-vue-tabs-border-bottom {
+.jskos-vue-tabs-border-bottom {
   border-bottom: 1px solid rgba(132,141,149,0.2);
 }
-.cocoda-vue-tabs-border-left {
+.jskos-vue-tabs-border-left {
   border-left: 1px solid rgba(132,141,149,0.2);
 }
 
 /* Fixed header classes */
-.cocoda-vue-tabs-header {
+.jskos-vue-tabs-header {
   flex: none;
   display: flex;
   flex-wrap: wrap;
@@ -219,39 +216,39 @@ export default defineComponent({
   border-bottom: 1px solid rgba(132,141,149,0.2);
   margin-bottom: -1px;
 }
-.cocoda-vue-tabs-header-item {
+.jskos-vue-tabs-header-item {
   box-sizing: content-box;
   position: relative;
   margin: 0 2px;
   border-top: 3px solid transparent;
   font-weight: bold;
 }
-.cocoda-vue-tabs-header-item:first-child {
+.jskos-vue-tabs-header-item:first-child {
   margin-left: 0;
 }
-.cocoda-vue-tabs-header-item:last-child {
+.jskos-vue-tabs-header-item:last-child {
   margin-right: 0;
 }
-.cocoda-vue-tabs-header-item:hover {
+.jskos-vue-tabs-header-item:hover {
   cursor: pointer;
 }
 
 /* Flexible header classes */
-.cocoda-vue-tabs-header-item-inactive {
+.jskos-vue-tabs-header-item-inactive {
   color: #848d95;
 }
-.cocoda-vue-tabs-header-item-inactive:hover {
+.jskos-vue-tabs-header-item-inactive:hover {
   background-color: rgba(132,141,149,0.05);
 }
-.cocoda-vue-tabs-header-item-active {
+.jskos-vue-tabs-header-item-active {
   background-color: rgba(132,141,149,0.05);
 }
-.cocoda-vue-tabs-header-item-active:hover {
+.jskos-vue-tabs-header-item-active:hover {
   cursor: auto;
 }
 
 /* Classes activated by options */
-.cocoda-vue-tabs-header-item-fill {
+.jskos-vue-tabs-header-item-fill {
   flex-grow: 1;
   flex-shrink: 1;
   text-align: center;
@@ -259,46 +256,46 @@ export default defineComponent({
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.cocoda-vue-tabs-sm {
+.jskos-vue-tabs-sm {
   font-size: 0.85rem;
 }
-.cocoda-vue-tabs-md {
+.jskos-vue-tabs-md {
   font-size: 1rem;
 }
-.cocoda-vue-tabs-lg {
+.jskos-vue-tabs-lg {
   font-size: 1.2rem;
 }
-.cocoda-vue-tabs-sm .cocoda-vue-tabs-header-item {
+.jskos-vue-tabs-sm .jskos-vue-tabs-header-item {
   height: 24px;
   line-height: 24px;
   padding: 0 8px;
 }
-.cocoda-vue-tabs-md .cocoda-vue-tabs-header-item {
+.jskos-vue-tabs-md .jskos-vue-tabs-header-item {
   height: 32px;
   line-height: 32px;
   padding: 0 10px;
 }
-.cocoda-vue-tabs-lg .cocoda-vue-tabs-header-item {
+.jskos-vue-tabs-lg .jskos-vue-tabs-header-item {
   height: 48px;
   line-height: 48px;
   padding: 0 15px;
 }
-.cocoda-vue-tabs-sm .cocoda-vue-tabs-header-item-inactive {
+.jskos-vue-tabs-sm .jskos-vue-tabs-header-item-inactive {
   padding-bottom: 2px;
 }
-.cocoda-vue-tabs-md .cocoda-vue-tabs-header-item-inactive {
+.jskos-vue-tabs-md .jskos-vue-tabs-header-item-inactive {
   padding-bottom: 3px;
 }
-.cocoda-vue-tabs-lg .cocoda-vue-tabs-header-item-inactive {
+.jskos-vue-tabs-lg .jskos-vue-tabs-header-item-inactive {
   padding-bottom: 5px;
 }
-.cocoda-vue-tabs-sm .cocoda-vue-tabs-header-item-active {
+.jskos-vue-tabs-sm .jskos-vue-tabs-header-item-active {
   border-bottom: 2px solid transparent;
 }
-.cocoda-vue-tabs-md .cocoda-vue-tabs-header-item-active {
+.jskos-vue-tabs-md .jskos-vue-tabs-header-item-active {
   border-bottom: 3px solid transparent;
 }
-.cocoda-vue-tabs-lg .cocoda-vue-tabs-header-item-active {
+.jskos-vue-tabs-lg .jskos-vue-tabs-header-item-active {
   border-bottom: 5px solid transparent;
 }
 </style>

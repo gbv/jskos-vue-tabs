@@ -52,7 +52,7 @@
     "vite": "^2.3.4",
     "yesno": "^0.3.1"
   },
-  "author": "Stefan Peters <stefandesu@exo.pm> (https://exo.pm)",
+  "author": "Stefan Peters <stefan.peters@gbv.de> (https://exo.pm)",
   "license": "MIT",
   "description": "A simple tabs library for Vue 3."
 }

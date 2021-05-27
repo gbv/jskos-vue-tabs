@@ -1,7 +1,7 @@
 <template>
   <div
     v-show="isActive"
-    class="cocoda-vue-tabs-content">
+    class="jskos-vue-tabs-content">
     <slot />
   </div>
 </template>
@@ -40,9 +40,6 @@ export default defineComponent({
       isActive: false,
     }
   },
-  computed: {
-
-  },
   mounted () {
     this.isActive = this.active
     this.$parent.registerTab(this)
@@ -56,17 +53,17 @@ export default defineComponent({
 <style scoped>
 
 /* Content classes */
-.cocoda-vue-tabs-content {
+.jskos-vue-tabs-content {
   flex: 1;
   overflow: scroll;
 }
-.cocoda-vue-tabs-sm .cocoda-vue-tabs-content {
+.jskos-vue-tabs-sm .jskos-vue-tabs-content {
   padding: 10px 8px 8px 8px;
 }
-.cocoda-vue-tabs-md .cocoda-vue-tabs-content {
+.jskos-vue-tabs-md .jskos-vue-tabs-content {
   padding: 13px 10px 10px 10px;
 }
-.cocoda-vue-tabs-lg .cocoda-vue-tabs-content {
+.jskos-vue-tabs-lg .jskos-vue-tabs-content {
   padding: 16px 15px 15px 15px;
 }
 

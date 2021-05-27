@@ -1,7 +1,7 @@
 <template>
   <div>
-    <h1>cocoda-vue-tabs</h1>
-    <a href="https://github.com/stefandesu/cocoda-vue-tabs">https://github.com/stefandesu/cocoda-vue-tabs</a>
+    <h1>jskos-vue-tabs</h1>
+    <a href="https://github.com/gbv/jskos-vue-tabs">https://github.com/gbv/jskos-vue-tabs</a>
     <h2>Examples:</h2>
     <h3>Simple tabs with no extras</h3>
     <example-01 />
