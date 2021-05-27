@@ -9,6 +9,8 @@
 ## Table of Contents <!-- omit in toc -->
 - [Development](#development)
 - [Usage](#usage)
+  - [Node.js](#nodejs)
+  - [Browser](#browser)
 - [Publish](#publish)
 - [License](#license)
 
@@ -22,6 +24,7 @@ npm run build # for Vite build
 ```
 
 ## Usage
+### Node.js
 
 1\. Add the library to your Vue project:
 ```bash
@@ -39,6 +42,45 @@ import * as JskosVueTabs from "jskos-vue-tabs"
 app.use(JskosVueTabs)
 
 app.mount('#app')
+```
+
+### Browser
+The library can be used in the browser, for example via jsDelivr.
+
+[![](https://data.jsdelivr.com/v1/package/npm/jskos-vue-tabs/badge?style=rounded)](https://www.jsdelivr.com/package/npm/jskos-vue-tabs)
+
+Fully working HTML example:
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue App</title>
+    <!-- Our library's stylesheet here -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jskos-vue-tabs/dist/style.css">
+  </head>
+  <body>
+    <div id="app">
+      <tabs>
+        <tab title="Tab 1">
+          Content of Tab 1
+        </tab>
+        <tab title="Tab 2">
+          Content of Tab 2
+        </tab>
+      </tabs>
+    </div>
+    <!-- Vue 3 production build -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.prod.js"></script>
+    <!-- Our library -->
+    <script src="https://cdn.jsdelivr.net/npm/jskos-vue-tabs/dist/jskos-vue-tabs.umd.min.js"></script>
+    <script>
+      // Here, we are creating an empty Vue app and include the library as a plugin.
+      Vue.createApp({}).use(JskosVueTabs).mount("#app")
+    </script>
+  </body>
+</html>
 ```
 
 ## Publish
