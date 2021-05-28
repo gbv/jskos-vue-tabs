@@ -46,6 +46,7 @@ export default defineComponent({
 .jskos-vue-tabs-content {
   flex: 1;
   overflow: scroll;
+  position: relative;
 }
 .jskos-vue-tabs-sm .jskos-vue-tabs-content {
   padding: 10px 8px 8px 8px;
