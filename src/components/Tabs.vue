@@ -124,6 +124,7 @@ export default defineComponent({
       return this.tabs.map(tab => tab.hidden)
     },
   },
+  // TODO: For certain changes, all of these watchers apply and call activeTab. It might not be an issue, but it's not efficient.
   watch: {
     tabs(tabs) {
       // Find index of active tab
@@ -141,7 +142,11 @@ export default defineComponent({
   methods: {
     registerTab(tab) {
       const index = Array.from(this.$refs.tabs.children).indexOf(tab.$el)
-      this.tabs.splice(index, 0, tab)
+      this.tabs = [
+        ...this.tabs.slice(0, index),
+        tab,
+        ...this.tabs.slice(index),
+      ]
       if (tab.isActive) {
         this.activateTab(index)
       }
