@@ -1,7 +1,5 @@
 <template>
-  <div
-    v-show="isActive"
-    class="jskos-vue-tabs-content">
+  <div v-show="isActive">
     <slot />
   </div>
 </template>
@@ -39,23 +37,3 @@ export default defineComponent({
   },
 })
 </script>
-
-<style scoped>
-
-/* Content classes */
-.jskos-vue-tabs-content {
-  flex: 1;
-  overflow: scroll;
-  position: relative;
-}
-.jskos-vue-tabs-sm .jskos-vue-tabs-content {
-  padding: 10px 8px 8px 8px;
-}
-.jskos-vue-tabs-md .jskos-vue-tabs-content {
-  padding: 13px 10px 10px 10px;
-}
-.jskos-vue-tabs-lg .jskos-vue-tabs-content {
-  padding: 16px 15px 15px 15px;
-}
-
-</style>

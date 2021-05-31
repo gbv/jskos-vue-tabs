@@ -26,7 +26,11 @@
         </slot>
       </div>
     </div>
-    <slot />
+    <div
+      ref="tabs"
+      class="jskos-vue-tabs-content">
+      <slot />
+    </div>
   </div>
 </template>
 
@@ -136,7 +140,7 @@ export default defineComponent({
   },
   methods: {
     registerTab(tab) {
-      const index = Array.from(this.$refs.root.children).indexOf(tab.$el) - 1
+      const index = Array.from(this.$refs.tabs.children).indexOf(tab.$el)
       this.tabs.splice(index, 0, tab)
       if (tab.isActive) {
         this.activateTab(index)
@@ -297,5 +301,20 @@ export default defineComponent({
 }
 .jskos-vue-tabs-lg .jskos-vue-tabs-header-item-active {
   border-bottom: 5px solid transparent;
+}
+/* Content classes */
+.jskos-vue-tabs-content {
+  flex: 1;
+  overflow: scroll;
+  position: relative;
+}
+.jskos-vue-tabs-sm .jskos-vue-tabs-content {
+  padding: 10px 8px 8px 8px;
+}
+.jskos-vue-tabs-md .jskos-vue-tabs-content {
+  padding: 13px 10px 10px 10px;
+}
+.jskos-vue-tabs-lg .jskos-vue-tabs-content {
+  padding: 16px 15px 15px 15px;
 }
 </style>
