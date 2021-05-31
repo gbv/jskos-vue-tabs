@@ -30,7 +30,7 @@
         {{ slotProps.tab.title }}
         <div
           class="closeButton"
-          @click="closeTab(slotProps.index)">
+          @click.stop="closeTab(slotProps.index)">
           x
         </div>
       </template>
@@ -48,8 +48,8 @@ export default {
   data () {
     return {
       tabIndex: 0,
-      tabs: ["A tab", "Another tab"],
-      hiddenTabs: [],
+      tabs: ["A tab", "Hidden by default", "Another tab"],
+      hiddenTabs: [1],
       tabCount: 0,
     }
   },
@@ -61,6 +61,8 @@ export default {
   methods: {
     prependTab() {
       this.tabs = [`Tab ${this.tabCount}`].concat(this.tabs)
+      // Increase hidden tab indexes by 1
+      this.hiddenTabs = this.hiddenTabs.map(i => i + 1)
     },
     appendTab() {
       this.tabs = this.tabs.concat(`Tab ${this.tabCount}`)
@@ -72,7 +74,12 @@ export default {
       console.log("[Example02] Tab changed to index", index, "with tab", tab)
     },
     closeTab(index) {
-      this.tabs.splice(index, 1)
+      this.tabs = [
+        ...this.tabs.slice(0, index),
+        ...this.tabs.slice(index + 1),
+      ]
+      // Decrease hidden tab indexes by 1 (for all tabs after the closed tab)
+      this.hiddenTabs = this.hiddenTabs.map(i => i - (i >= index ? 1 : 0))
     },
   },
 }

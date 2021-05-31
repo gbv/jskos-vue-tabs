@@ -20,12 +20,5 @@ import Tab from "../components/Tab.vue"
 export default {
   name: "Example01",
   components: { Tabs, Tab },
-  data () {
-    return {}
-  },
 }
 </script>
-
-<style>
-
-</style>

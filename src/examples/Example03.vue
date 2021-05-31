@@ -8,11 +8,16 @@
     <tab
       title="Second Tab"
       active>
-      Content of second tab
+      Content of second tab (which is active by default); there is also an absolutely positioned element in the content window for all tabs.
     </tab>
     <tab title="Third Tab">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eleifend hendrerit felis, sit amet convallis risus sollicitudin id. Donec nec mollis enim. Aliquam porttitor in ligula eu malesuada. Etiam id condimentum nisl, ut rutrum diam. Pellentesque quis odio mollis massa facilisis aliquam ut vitae nisi. Ut eleifend nibh justo, id commodo ipsum auctor at. Maecenas pellentesque ligula eget iaculis rutrum. Morbi pellentesque urna sit amet accumsan aliquet. Ut eget elit vel odio venenatis tempus non at libero. Morbi quis sem ac ante vestibulum gravida vitae id nulla. Aenean ac laoreet lorem, ac tincidunt enim. Nam vitae dignissim neque. Phasellus ipsum nunc, molestie at fermentum eu, tincidunt ut nibh. Suspendisse quis molestie risus. Nam dictum massa sit amet turpis vulputate ultrices. Duis sodales semper iaculis.
     </tab>
+    <!-- Have something absolutely positioned in the content window -->
+    <div
+      style="position: absolute; bottom: 0; right: 0;">
+      🚀
+    </div>
   </tabs>
 </template>
 
@@ -23,12 +28,5 @@ import Tab from "../components/Tab.vue"
 export default {
   name: "Example03",
   components: { Tabs, Tab },
-  data () {
-    return {}
-  },
 }
 </script>
-
-<style>
-
-</style>
