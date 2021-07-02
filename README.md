@@ -44,6 +44,18 @@ app.use(JskosVueTabs)
 app.mount('#app')
 ```
 
+3\. Add the stylesheet to your project.
+
+Either add it in code (`main.js` or SFC):
+```js
+import "jskos-vue-tabs/dist/style.css"
+```
+
+Or add it as a style tag (in SFC):
+```html
+<style src="jskos-vue-tabs/dist/style.css"></style>
+```
+
 ### Browser
 The library can be used in the browser, for example via jsDelivr.
 
