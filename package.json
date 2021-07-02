@@ -2,17 +2,11 @@
   "name": "jskos-vue-tabs",
   "version": "0.1.2",
   "files": [
-    "dist",
-    "src"
+    "dist"
   ],
   "main": "./dist/jskos-vue-tabs.umd.js",
   "module": "./dist/jskos-vue-tabs.es.js",
-  "exports": {
-    ".": {
-      "import": "./src/index.js",
-      "require": "./dist/jskos-vue-tabs.umd.js"
-    }
-  },
+  "style": "./dist/style.css",
   "sideEffects": false,
   "scripts": {
     "test": "mocha --recursive",
