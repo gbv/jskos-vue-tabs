@@ -310,7 +310,7 @@ export default defineComponent({
 /* Content classes */
 .jskos-vue-tabs-content {
   flex: 1;
-  overflow: scroll;
+  overflow: auto;
   position: relative;
 }
 .jskos-vue-tabs-sm .jskos-vue-tabs-content {
