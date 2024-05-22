@@ -5,10 +5,14 @@
     "dist",
     "src"
   ],
-  "main": "./dist/jskos-vue-tabs.umd.cjs",
-  "module": "./dist/jskos-vue-tabs.js",
   "type": "module",
-  "style": "./dist/style.css",
+  "exports": {
+    ".": {
+      "require": "./dist/jskos-vue-tabs.umd.cjs",
+      "import": "./dist/jskos-vue-tabs.js"
+    },
+    "./dist/style.css": "./dist/style.css"
+  },
   "sideEffects": false,
   "scripts": {
     "test": "mocha --recursive",
