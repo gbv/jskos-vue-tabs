@@ -1,6 +1,9 @@
 {
   "name": "jskos-vue-tabs",
   "version": "0.1.6",
+  "description": "A simple tabs library for Vue 3.",
+  "author": "Stefan Peters <stefan.peters@gbv.de>",
+  "license": "MIT",
   "files": [
     "dist",
     "src"
@@ -37,22 +40,19 @@
     "test"
   ],
   "dependencies": {
-    "vue": "^3.4.27"
+    "vue": "^3.5.8"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^5.0.4",
-    "@vue/compiler-sfc": "^3.4.27",
+    "@vitejs/plugin-vue": "^5.1.4",
+    "@vue/compiler-sfc": "^3.5.8",
     "eslint": "^8.57.0",
     "eslint-config-gbv": "^1.1.0",
     "eslint-plugin-vue": "^9.26.0",
-    "lint-staged": "^15.2.2",
-    "mocha": "^10.4.0",
+    "lint-staged": "^15.2.10",
+    "mocha": "^10.7.3",
     "mocha-eslint": "^7.0.0",
     "pre-commit": "^1.2.2",
-    "vite": "^5.2.11",
+    "vite": "^5.4.8",
     "yesno": "^0.4.0"
-  },
-  "author": "Stefan Peters <stefan.peters@gbv.de> (https://exo.pm)",
-  "license": "MIT",
-  "description": "A simple tabs library for Vue 3."
+  }
 }
