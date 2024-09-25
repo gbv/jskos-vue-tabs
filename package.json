@@ -1,6 +1,6 @@
 {
   "name": "jskos-vue-tabs",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "A simple tabs library for Vue 3.",
   "author": "Stefan Peters <stefan.peters@gbv.de>",
   "license": "MIT",
