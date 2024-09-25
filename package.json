@@ -4,6 +4,14 @@
   "description": "A simple tabs library for Vue 3.",
   "author": "Stefan Peters <stefan.peters@gbv.de>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gbv/jskos-vue-tabs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gbv/jskos-vue-tabs/issues"
+  },
+  "homepage": "https://github.com/gbv/jskos-vue-tabs",
   "files": [
     "dist",
     "src"
