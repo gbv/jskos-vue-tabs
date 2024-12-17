@@ -9,6 +9,7 @@ export default defineConfig({
     lib: {
       entry: path.resolve(__dirname, "src/index.js"),
       name: "JskosVueTabs",
+      cssFileName: "style",
     },
     rollupOptions: {
       external: ["vue"],
